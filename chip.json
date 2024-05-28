@@ -1,0 +1,21 @@
+{
+  "name": "cd54hct30",
+  "author": "Algovoid",
+  "pins": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "GND",
+    "YINV",
+    "NC",
+    "NC",
+    "G",
+    "H",
+    "NC",
+    "VCC"
+  ],
+  "controls": []
+}
