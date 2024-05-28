@@ -4,6 +4,10 @@ Example of a basic custom chip for [Wokwi](https://wokwi.com/).
 
 The actual source code for the chip lives in [src/main.c](src/main.c), and the pins are described in [chip.json](chip.json).
 
+## Chip functionalities explained in DOCS 
+
+[Go-to-docs](docs/README.md)
+
 ## Building
 
 The easiest way to build the project is to open it inside a Visual Studio Code dev container, and then run the `make` command.
