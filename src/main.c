@@ -17,14 +17,14 @@ typedef struct {
     pin_t pin_YINV;
 } chip_state_t;
 
-static void set_xor(chip_state_t *chip) {
+static void set_logic(chip_state_t *chip) {
   pin_write(chip->pin_YINV, !( pin_read(chip->pin_A) && pin_read(chip->pin_B) && pin_read(chip->pin_C) && pin_read(chip->pin_D) && pin_read(chip->pin_E) && pin_read(chip->pin_F) && pin_read(chip->pin_G) && pin_read(chip->pin_H) )  );
 }
 
 
 static void chip_pin_change(void *user_data, pin_t pin, uint32_t value) {
   chip_state_t *chip = (chip_state_t*)user_data;
-  set_xor(chip);
+  set_logic(chip);
 }
 
 void chip_init() {
@@ -75,5 +75,5 @@ void chip_init() {
   pin_watch(chip->pin_G, &config);
   pin_watch(chip->pin_H, &config);  
 
-  set_xor(chip);
+  set_logic(chip);
 }
